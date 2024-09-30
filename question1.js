@@ -6,7 +6,7 @@
 
 // Sample Output: Minimum cost to connect all rooms: 37
 
-// Create a class
+// Created a class
 class Edge {
   constructor(source, destination, weight) {
     this.source = source;
@@ -15,7 +15,7 @@ class Edge {
   }
 }
 
-// Define a function to perform Prim's algorithm
+// This is a function that performs Prim's algorithm
 function primsAlgorithm(edges, numVertices) {
   const visited = new Array(numVertices).fill(false);
   const key = new Array(numVertices).fill(Infinity);
@@ -58,7 +58,7 @@ function primsAlgorithm(edges, numVertices) {
   return totalCost;
 }
 
-// Edges and their respective weights
+// Edges and their assigned weights
 const edges = [
   new Edge(0, 1, 4),
   new Edge(0, 7, 8),
@@ -80,3 +80,5 @@ const numVertices = 9;
 
 const minimumCost = primsAlgorithm(edges, numVertices);
 console.log("Minimum cost to connect all rooms:", minimumCost);
+
+// output works - sends back 37
