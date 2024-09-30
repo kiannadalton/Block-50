@@ -4,7 +4,7 @@
 
 // Sample Output: All possible routes from A to F: [ [ 'A', 'B', 'E', 'F' ], [ 'A', 'C', 'F' ] ]
 
-//Create a function with parameters graph,source and target destinations.
+//The below is a function for a DFS graph with parameters that inclide  graph, source, and target destinations.
 function dfsAllRoutes(graph, source, target) {
   const routes = [];
 
@@ -15,7 +15,7 @@ function dfsAllRoutes(graph, source, target) {
     }
 
     path.push(current);
-    //visit each neighboring nodes
+    //visits each neighboring nodes
     const neighbors = graph[current];
     for (let i = 0; i < neighbors.length; i++) {
       const neighbor = neighbors[i];
@@ -32,7 +32,7 @@ function dfsAllRoutes(graph, source, target) {
   return routes;
 }
 
-// Nodes and its neighbors
+// The Nodes and their neighbors
 const graph = {
   A: ["B", "C"],
   B: ["A", "D", "E"],
@@ -41,10 +41,12 @@ const graph = {
   E: ["B", "F"],
   F: ["C", "E"],
 };
-//initialize the respective nodes with source and destination
+//initialize nodes with source and destination
 const source = "A";
 const target = "F";
 
 const allRoutes = dfsAllRoutes(graph, source, target);
 //prints the all possible outputs
 console.log(`All possible routes from ${source} to ${target}:`, allRoutes);
+
+// output works - ABEF, ACF

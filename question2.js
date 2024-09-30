@@ -6,7 +6,6 @@
 
 // Sample Output: Shortest path from A to F: [ 'A', 'C', 'F' ]
 
-
 // this is to find the shortest path
 function bfsShortestPath(graph, source, target) {
   // Stores nodes via an array called queue
@@ -30,7 +29,7 @@ function bfsShortestPath(graph, source, target) {
     const neighbors = graph[current];
     for (let i = 0; i < neighbors.length; i++) {
       const neighbor = neighbors[i];
-    //   if visited does not have a neighbor, add a neighbor
+      //   if visited does not have a neighbor, add a neighbor
       if (!visited.has(neighbor)) {
         visited.add(neighbor);
         queue.push([...path, neighbor]);
