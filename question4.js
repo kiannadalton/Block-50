@@ -24,6 +24,7 @@
 
 // Sample Output: Shortest path: A -> B -> E -> F and Distance: 8
 
+// This function finds the shortest path
 class PriorityQueue {
   constructor() {
     this.elements = [];
@@ -40,6 +41,7 @@ class PriorityQueue {
       }
     }
 
+    // if not added, push item
     if (!added) {
       this.elements.push(item);
     }
@@ -116,3 +118,5 @@ const path = result.path.join(" -> ");
 
 console.log(`Shortest path: ${path}`);
 console.log(`Distance: ${result.distance}`);
+
+// outpout works
